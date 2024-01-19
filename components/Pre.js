@@ -12,13 +12,13 @@ const Pre = (props) => {
     setHovered(false)
     setCopied(false)
   }
-  // const onCopy = () => {
-  //   setCopied(true)
-  //   navigator.clipboard.writeText(textInput.current.textContent)
-  //   setTimeout(() => {
-  //     setCopied(false)
-  //   }, 2000)
-  // }
+  const onCopy = () => {
+    setCopied(true)
+    navigator.clipboard.writeText(textInput.current.textContent)
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  }
 
   return (
     <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
